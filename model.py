@@ -1,5 +1,5 @@
 # Nikhil Patil
-# CSEC 620 Report
+# CSEC 620 Project 3
 
 import torch
 import torch.nn as nn
@@ -10,7 +10,7 @@ import random, time
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 
-
+# Decide Device to be used depending on machine ran on
 device = (
     "cuda"
     if torch.cuda.is_available()
@@ -59,6 +59,7 @@ scaler = StandardScaler()
 X_train = scaler.fit_transform(X_train)
 X_test = scaler.transform(X_test)
 
+# create datasets and loaders
 train_dataset = PhishingDataset(X_train, y_train)
 test_dataset = PhishingDataset(X_test, y_test)
 train_loader = DataLoader(train_dataset, batch_size=64, shuffle=True)
@@ -70,7 +71,7 @@ model = PhishingNN(input_size, hidden_size)
 criterion = nn.CrossEntropyLoss()
 optimizer = optim.Adam(model.parameters(), lr=0.001)
 
-
+# train model
 num_epochs = 15
 time_start = time.perf_counter()
 for epoch in range(num_epochs):
@@ -90,6 +91,7 @@ for epoch in range(num_epochs):
 
 time_end = time.perf_counter()
 
+# evaluate model
 model.eval()
 with torch.no_grad():
     correct = 0
