@@ -6,7 +6,7 @@ import torch.nn as nn
 import torch.optim as optim
 from torch.utils.data import DataLoader,Dataset
 import pandas as pd
-import random
+import random, time
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 
@@ -71,7 +71,8 @@ criterion = nn.CrossEntropyLoss()
 optimizer = optim.Adam(model.parameters(), lr=0.001)
 
 
-num_epochs = 10
+num_epochs = 15
+time_start = time.perf_counter()
 for epoch in range(num_epochs):
     model.train()
     running_loss = 0.0
@@ -87,6 +88,7 @@ for epoch in range(num_epochs):
 
     print(f"Epoch [{epoch+1}/{num_epochs}], Loss: {running_loss/len(train_loader):.4f}")
 
+time_end = time.perf_counter()
 
 model.eval()
 with torch.no_grad():
@@ -99,5 +101,8 @@ with torch.no_grad():
         correct += (predicted == targets).sum().item()
 
 accuracy = 100 * correct / total
+
+time_elapsed = time_end - time_start
+print(f"Time Taken: {time_elapsed:.2f} seconds")
 print(f"Test Accuracy: {accuracy:.2f}%")
 
