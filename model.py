@@ -1,14 +1,20 @@
 # Nikhil Patil
 # CSEC 620 Project 3
+# Phishing Neural Network Model
 
+# Imports
+import random, time
 import torch
 import torch.nn as nn
 import torch.optim as optim
 from torch.utils.data import DataLoader,Dataset
+import matplotlib.pyplot as plt
 import pandas as pd
-import random, time
+import seaborn as sns
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
+from sklearn.metrics import classification_report, confusion_matrix
+
 
 # Decide Device to be used depending on machine ran on
 device = (
@@ -48,7 +54,7 @@ class PhishingNN(nn.Module):
         x = self.fc2(x)
         return x
 
-data = pd.read_csv('dataset_small.csv')
+data = pd.read_csv('dataset_full.csv')
 
 X = data.drop(columns=['phishing']).values
 y = data['phishing'].values
@@ -91,6 +97,9 @@ for epoch in range(num_epochs):
 
 time_end = time.perf_counter()
 
+all_labels = []
+all_preds = []
+
 # evaluate model
 model.eval()
 with torch.no_grad():
@@ -102,9 +111,20 @@ with torch.no_grad():
         total += targets.size(0)
         correct += (predicted == targets).sum().item()
 
-accuracy = 100 * correct / total
+        all_labels.extend(targets.cpu().numpy())
+        all_preds.extend(predicted.cpu().numpy())
 
+
+accuracy = 100 * correct / total
 time_elapsed = time_end - time_start
+conf_matrix = confusion_matrix(all_labels, all_preds)
+class_report = classification_report(all_labels, all_preds, target_names=["Not Phishing", "Phishing"])
+
 print(f"Time Taken: {time_elapsed:.2f} seconds")
 print(f"Test Accuracy: {accuracy:.2f}%")
-
+print(f"Classification Report: {class_report}")
+sns.heatmap(conf_matrix, annot=True, fmt=".2f",cmap="Blues")
+plt.ylabel("Actual Class")
+plt.xlabel("Predicted Class")
+plt.savefig('confusion_matrix.png')
+plt.show()
