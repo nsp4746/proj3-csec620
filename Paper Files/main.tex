@@ -1,0 +1,128 @@
+% define \title (only used by writelatex.com)
+%\title{CSEC-520/620 Project Report}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% LaTeX Template: Project Titlepage
+%
+% Source: http://www.howtotex.com
+% Date: April 2011
+% 
+% This is a title page template which be used for articles & reports.
+% 
+% Feel free to distribute this example, but please keep the referral
+% to howtotex.com
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% How to use writeLaTeX: 
+%
+% You edit the source code here on the left, and the preview on the
+% right shows you the result within a few seconds.
+%
+% Bookmark this page and share the URL with your co-authors. They can
+% edit at the same time!
+%
+% You can upload figures, bibliographies, custom classes and
+% styles using the files menu.
+%
+% If you're new to LaTeX, the wikibook is a great place to start:
+% http://en.wikibooks.org/wiki/LaTeX
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% --------------------------------------------------------------------
+% Preamble
+% --------------------------------------------------------------------
+%\documentclass[ fontsize=11pt,twoside]{scrartcl}	% KOMA
+\documentclass[conference]{IEEEtran}
+\usepackage[letterpaper,pdftex, left=.75in, right=.75in, bottom=1in, top=0.75in]{geometry}	% A4paper margins
+%\setlength{\oddsidemargin}{5mm}			% Remove 'twosided' indentation
+%\setlength{\evensidemargin}{5mm}
+
+\usepackage[english]{babel}
+\usepackage[protrusion=true,expansion=true]{microtype}	
+\usepackage{amsmath,amsfonts,amsthm,amssymb}
+\usepackage{graphicx}
+\usepackage{flushend}
+
+
+% --------------------------------------------------------------------
+% Definitions (do not change this)
+% --------------------------------------------------------------------
+\newcommand{\HRule}[1]{\rule{\linewidth}{#1}} 	% Horizontal rule
+
+\makeatletter							% Title
+\def\printtitle{%						
+    {\centering \@title\par}}
+\makeatother									
+
+\makeatletter							% Author
+\def\printauthor{%					
+    {\centering \Large \@author}}				
+\makeatother							
+
+% --------------------------------------------------------------------
+% Metadata (Change this)
+% --------------------------------------------------------------------
+\title{	\Large \textsc{ CSEC 620 Cyber Analytics and Machine Learning \\ 
+															} 	% Subtitle
+		 	\\[2.0cm]								% 2cm spacing
+			\HRule{2pt} \\						% Upper rule
+			\LARGE \textbf{\uppercase{Project 3: Machine Learning for Security - Phishing}}	% Title
+			\HRule{2pt} \\ [0.5cm]		% Lower rule + 0.5cm spacing
+			\Large \today			% Todays date
+		}
+
+ \author{
+		Nikhil S. Patil\\
+        Kamron J. Cole\\
+        Graham G. Rogozinski\\
+        Patrick T. Elser\\
+		Department of Cybersecurity\\	
+        College of Computing and Information Sciences \\
+		Rochester Institute of Technology\\
+        \texttt{nsp4746@rit.edu} \\
+        \texttt{kjc8084@rit.edu} \\
+        \texttt{ggr4460@rit.edu}\\
+        \texttt{pte6144@rit.edu}\\
+}
+
+
+\begin{document}
+% ------------------------------------------------------------------------------
+% Maketitle
+% ------------------------------------------------------------------------------
+\thispagestyle{empty}		% Remove page numbering on this page
+
+\printtitle					% Print the title data as defined above
+  	\vfill
+\printauthor				% Print the author data as defined above
+\newpage
+% ------------------------------------------------------------------------------
+% Begin document
+% ------------------------------------------------------------------------------
+\setcounter{page}{1}		% Set page numbering to begin on this page
+
+
+%%%%%%%%%%%%%%%
+%														%
+% 			Main Contents            %
+%														%
+%%%%%%%%%%%%%%%
+\twocolumn
+\input{abstract}
+\input{introduction}
+\input{literature_review}
+\input{project_idea}
+\input{project_implementation}
+\input{project_testing}
+\input{project_data_analysis}
+\input{conclusions}
+\input{acknowledgement}
+\input{references} 
+\input{appendices}
+
+
+
+% ------------------------------------------------------------------------------
+% End document
+% ------------------------------------------------------------------------------
+\end{document}
