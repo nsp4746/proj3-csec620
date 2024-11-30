@@ -1,10 +1,71 @@
 \section{Literature Review}
-\begin{itemize}
+\paragraph{Introduction}
+Phishing email detection is a critical area of research due to the increasing sophistication and frequency of phishing attempts, which aim to exploit both human and technological vulnerabilities. Machine learning (ML) has emerges as the dominant approach for detecting phishing emails, offering adaptability and scalability beyond traditional rule-based "knowledge engineered" systems \cite{nandhini2020}.
 
-\item How, when the problem was raised by whom, what event, etc. 
-\item Any attempts have been proposed to attack the problems
-\item Pros and Cons of each existing solution
-\item How does your proposed solution fit within here, i.e., your solution is improving an existing solution, just another solution, or revolutionizing the way of thinking?
-\end{itemize}
+\subsection{Problems in Phishing Email Detection}
+\subsubsection{Reliance on Rule-Based Systems}
+Traditional email filters rely on knowledge-engineering approaches that require constant updates to remain effective \cite{nandhini2020}. Machine learning addresses this limitation by learning patterns in data, allowing for more effective detection of novel phishing attempts.
+\subsubsection{Dataset Challenges}
+All of the reviewed literature highlights the importance of high-quality datasets for training machine learning models. However, the lack of large, diverse, and balanced datasets remains a significant challenge in phishing email detection research.
+\subsubsection{Underexplored Features}
+While much research focuses on content and header features, URL features are less studied despite their potential in identifying phishing attempts \cite{atlam2023}. For example, the inclusion of header features as well as content features tends to increase model accuracy, highlighting the importance of including more information, increasing model accuracy when combined with other features.
+\subsubsection{Algorithmic Trade-Offs}
+Naive Bayesian classifiers as well as Decision Tree models are popular choices for phishing email detection due to their research showing the highest accuracy. However, further research with Naive Bayesian classifiers have shown weaknesses due to it's assumption of class-conditional independence, which can lead to misclassification \cite{ahmed2022}.
 
-Make sure to cite references. Here is how to cite the great textbook written by Knuth \cite{knuth2006art} in \LaTeX{}. Here is the way to cite a journal article written by the father of computer science Alan Turing \cite{turing1950computing}. 
+\subsection{Addressing the Issues}
+\subsubsection{Advances in ML Algorithms}
+Recent research has explored the use of deep learning models, such as Convolutional Neural Networks (CNNs) and Recurrent Neural Networks (RNNs), for phishing email detection. These models have shown promising results in terms of accuracy and generalizability, highlighting the potential of deep learning in addressing the challenges of phishing email detection. Natural Language Processing (NLP) techniques have also been used to extract features from email content, further improving model performance over previous methods, though much of their efficacy is yet to be explored.
+\subsubsection{Feature Selection and Integration of Multiple Features}
+Methods of text-based analysis and feature selection are crucial for improving the accuracy of phishing email detection models. The integration of multiple features, including URL-based features, can enhance model performance and generalizability. Specific email features may require different feature extraction techniques.
+
+\subsection{Contributional Goals}
+This paper aims to put more emphasis on URL features of phishing emails, an underexplored area in phishing detection research. By focusing on source addresses and other occurences of URLs in phishing emails, we aim to further call for the integration of multiple features and use of larger datasets to enhance model accuracy and generalizability respectively. With the integration of a URL-focused model into existing phishing email detection systems, we hope to improve the overall performance of these systems and contribute to the ongoing efforts to combat phishing attacks as this approach is likely to achieve higher detection accuracy and convenience by compensating for the weaknesses of rule-based systems.
+
+\paragraph{Conclusion}
+The literature highlights the critical role of machine learning in addressing challenges related to phishing email detection, including adaptability, dataset quality, and feature selection. This paper contributes to the underexplored area of URL features in phishing email detection, proposing the integration of URL-based features to enhance detection accuracy and generalizability. By addressing these challenges and leveraging the strengths of machine learning, we aim to improve the overall performance of phishing email detection systems and contribute to the ongoing efforts to combat phishing attacks.
+
+\begin{thebibliography}{10}
+\bibitem{kumar2020}
+Kumar, N., Sonowal, S., and Nishant. "Email Spam Detection Using Machine Learning Algorithms." 
+\textit{2020 Second International Conference on Inventive Research in Computing Applications (ICIRCA)}, Coimbatore, India, 2020, pp. 108--113. 
+\url{https://doi.org/10.1109/ICIRCA48905.2020.9183098}.
+
+\bibitem{ahmed2022}
+Ahmed, N., Amin, R., Aldabbas, H., Koundal, D., Alouffi, B., and Shah, T. "Machine Learning Techniques for Spam Detection in Email and IoT Platforms: Analysis and Research Challenges." 
+\textit{Security and Communication Networks}, vol. 2022, Article 1862888. 
+\url{https://doi.org/10.1155/2022/1862888}.
+    
+\bibitem{vazhayil2018}
+Vazhayil, A., Harikrishnan, N. B., Vinayakumar, R., Soman, K. P., and Verma, A. D. R. "PED-ML: Phishing Email Detection Using Classical Machine Learning Techniques." 
+In \textit{Proceedings of the 1st Anti-Phishing Shared Pilot at the 4th ACM International Workshop on Security and Privacy Analytics (IWSPA)}, Tempe, AZ, USA, 2018, pp. 1--8.
+
+\bibitem{nandhini2020}
+Nandhini, S., and Marseline, J. K. S. "Performance Evaluation of Machine Learning Algorithms for Email Spam Detection." 
+\textit{2020 International Conference on Emerging Trends in Information Technology and Engineering (ic-ETITE)}, Vellore, India, 2020, pp. 1--4. 
+\url{https://doi.org/10.1109/ic-ETITE47903.2020.312}.
+
+\bibitem{atlam2023}
+Atlam, H. F., and Oluwatimilehin, O. "Business Email Compromise Phishing Detection Based on Machine Learning: A Systematic Literature Review." 
+\textit{Electronics}, vol. 12, no. 1, 2023, p. 42. 
+\url{https://doi.org/10.3390/electronics12010042}.
+
+\bibitem{harikrishnan2018}
+Harikrishnan, N. B., Vinayakumar, R., and Soman, K. P. "A Machine Learning Approach Towards Phishing Email Detection." 
+In \textit{CEN-Security@IWSPA 2018}.
+
+\bibitem{alam2020}
+Alam, M. N., Sarma, D., Lima, F. F., Saha, I., Ulfath, R. E., and Hossain, S. "Phishing Attacks Detection Using Machine Learning Approach." 
+\textit{2020 Third International Conference on Smart Systems and Inventive Technology (ICSSIT)}, Tirunelveli, India, 2020, pp. 1173--1179. 
+\url{https://doi.org/10.1109/ICSSIT48917.2020.9214225}.
+
+\bibitem{dada2019}
+Dada, E. G., Bassi, J. S., Chiroma, H., Abdulhamid, S. M., Adetunmbi, A. O., and Ajibuwa, O. E. "Machine Learning for Email Spam Filtering: Review, Approaches and Open Research Problems." 
+\textit{Heliyon}, vol. 5, no. 6, 2019, Article e01802. 
+\url{https://doi.org/10.1016/j.heliyon.2019.e01802}.
+
+\bibitem{salloum2022}
+Salloum, S., Gaber, T., Vadera, S., and Shaalan, K. "A Systematic Literature Review on Phishing Email Detection Using Natural Language Processing Techniques." 
+\textit{IEEE Access}, vol. 10, 2022, pp. 65703--65727. 
+\url{https://doi.org/10.1109/ACCESS.2022.3183083}.
+    
+\end{thebibliography}
