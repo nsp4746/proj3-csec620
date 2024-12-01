@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Arch Linux) (preloaded format=pdflatex 2024.11.8)  19 NOV 2024 14:57
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Arch Linux) (preloaded format=pdflatex 2024.11.8)  30 NOV 2024 00:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -483,13 +483,21 @@ Package pdftex.def Info: figures/flowchart.png  used on input line 48.
 (./project_testing.tex) (./project_data_analysis.tex [2
 
  <./figures/sample_1.jpg> <./figures/algorithm.png> <./figures/flowchart.png>]
-<figures/plot.png, id=26, 784.9325pt x 864.22874pt>
-File: figures/plot.png Graphic file (type png)
-<use figures/plot.png>
-Package pdftex.def Info: figures/plot.png  used on input line 7.
-(pdftex.def)             Requested size: 216.81pt x 238.712pt.
-) (./conclusions.tex)
-(./acknowledgement.tex) (./references.tex (./main.bbl)) (./appendices.tex)
+Underfull \vbox (badness 3907) has occurred while \output is active []
+
+<Performance Metrics.png, id=26, 602.25pt x 372.39125pt>
+File: Performance Metrics.png Graphic file (type png)
+<use Performance Metrics.png>
+Package pdftex.def Info: Performance Metrics.png  used on input line 22.
+(pdftex.def)             Requested size: 216.81pt x 134.06075pt.
+<False Positive and Negative Rates.png, id=27, 602.25pt x 372.39125pt>
+File: False Positive and Negative Rates.png Graphic file (type png)
+<use False Positive and Negative Rates.png>
+Package pdftex.def Info: False Positive and Negative Rates.png  used on input l
+ine 29.
+(pdftex.def)             Requested size: 216.81pt x 134.06075pt.
+ [3 <./Performance Metrics.png>]) (./conclusions.tex) (./acknowledgement.tex)
+(./references.tex (./main.bbl)) (./appendices.tex)
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -501,66 +509,32 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[leftcolumn badness]: 10000 on 496.06401pt
-[rightcolumn badness]: 1000000 on 496.06401pt
-[leftcolumn badness]: 10000 on 496.06401pt
-[rightcolumn badness]: 1000000 on 496.06401pt
-[leftcolumn badness]: 10000 on 496.06401pt
-[rightcolumn badness]: 1000000 on 496.06401pt
-[leftcolumn badness]: 10000 on 496.06401pt
-[rightcolumn badness]: 1000000 on 496.06401pt
-[leftcolumn badness]: 10000 on 496.06401pt
-[rightcolumn badness]: 1000000 on 496.06401pt
-[leftcolumn badness]: 10000 on 496.06401pt
-[rightcolumn badness]: 1000000 on 496.06401pt
-[leftcolumn badness]: 10000 on 496.06401pt
-[rightcolumn badness]: 1000000 on 496.06401pt
-[leftcolumn badness]: 10000 on 496.06401pt
-[rightcolumn badness]: 1000000 on 496.06401pt
-[leftcolumn badness]: 10000 on 496.06401pt
-[rightcolumn badness]: 1000000 on 496.06401pt
-[leftcolumn badness]: 10000 on 496.06401pt
-[rightcolumn badness]: 1000000 on 496.06401pt
-[leftcolumn badness]: 10000 on 496.06401pt
-[rightcolumn badness]: 1000000 on 496.06401pt
-[leftcolumn badness]: 10000 on 496.06401pt
-[rightcolumn badness]: 1000000 on 496.06401pt
-[leftcolumn badness]: 10000 on 496.06401pt
-[rightcolumn badness]: 1000000 on 496.06401pt
-[leftcolumn badness]: 10000 on 496.06401pt
-[rightcolumn badness]: 1000000 on 496.06401pt
-[leftcolumn badness]: 10000 on 496.06401pt
-[rightcolumn badness]: 1000000 on 496.06401pt
-[leftcolumn badness]: 10000 on 496.06401pt
-[rightcolumn badness]: 1000000 on 496.06401pt
-[leftcolumn badness]: 10000 on 496.06401pt
-[rightcolumn badness]: 1000000 on 496.06401pt
 - LAST -
-Extra skip:53.00914pt
-Left:337.55893pt/0.0pt
-Right:284.54979pt/0.0pt
-Split: 335.44691pt
-Output:335.44691pt
+Extra skip:0.0pt
+Left:307.99275pt/2.16492pt
+Right:303.29976pt/0.0pt
+Split: 305.64626pt
+Output:305.64626pt
 Pageshrink: 0.0pt
 Pagestretch: 0.0pt
 @colht:668.4975pt
-FLUSHEND [output]: 335.44691pt
-FLUSHEND [leftcolumn badness]: 41
-FUSHEND [rightcolumn badness]: 135
-[3 <./figures/plot.png>] (./main.aux)
+FLUSHEND [output]: 305.64626pt
+FLUSHEND [leftcolumn badness]: 9
+FUSHEND [rightcolumn badness]: 0
+[4 <./False Positive and Negative Rates.png>] (./main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 7293 strings out of 476076
- 121308 string characters out of 5793775
- 1938187 words of memory out of 5000000
- 29202 multiletter control sequences out of 15000+600000
- 595707 words of font info for 152 fonts, out of 8000000 for 9000
+ 7349 strings out of 476076
+ 122104 string characters out of 5793775
+ 1940187 words of memory out of 5000000
+ 29210 multiletter control sequences out of 15000+600000
+ 597611 words of font info for 184 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 57i,7n,65p,1001b,251s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 57i,7n,65p,1036b,251s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fon
 ts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf-dist/fonts/type1/public
@@ -570,10 +544,10 @@ hare/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-dist
 /fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/time
 s/utmb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/shar
 e/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (3 pages, 561640 bytes).
+Output written on main.pdf (4 pages, 555988 bytes).
 PDF statistics:
- 78 PDF objects out of 1000 (max. 8388607)
- 43 compressed objects within 1 object stream
+ 83 PDF objects out of 1000 (max. 8388607)
+ 45 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 40981 words of extra memory for PDF output out of 42996 (max. 10000000)
+ 40986 words of extra memory for PDF output out of 42996 (max. 10000000)
 
