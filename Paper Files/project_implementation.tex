@@ -1,2 +1,38 @@
-\section{Project Implementation}
-In this section, describe details of your project design and implementation, document challenges and obstacles, and how you overcome them in design and implementation. 
+\section{Implementation Overview}
+
+The implementation of the phishing detection system is structured to integrate data preprocessing, neural network modeling, and training in a modular and scalable manner. Below, we provide a high-level overview of the main components.
+
+\subsection{Custom Dataset Class}
+The \texttt{PhishingDataset} class is designed to facilitate data loading and processing. It extends the PyTorch \texttt{Dataset} class and provides methods for retrieving features and labels as tensors. This design ensures seamless compatibility with PyTorch's \texttt{DataLoader}, enabling efficient batch-wise data handling during training and evaluation.
+
+\subsection{Neural Network Architecture}
+The phishing detection model is implemented as a feedforward neural network, encapsulated in the \texttt{PhishingNN} class. The network comprises:
+\begin{itemize}
+    \item An input layer, which maps the feature space to a hidden representation.
+    \item Two hidden layers with ReLU activations to introduce non-linearity and enhance the model's capacity to learn complex patterns.
+    \item An output layer producing logits for binary classification.
+\end{itemize}
+The modular design of the network allows for straightforward modifications and experimentation with different architectures.
+
+\subsection{Data Preprocessing and Splitting}
+The dataset, containing phishing-related features and labels, is preprocessed using the \texttt{load\_data} function. This includes:
+\begin{itemize}
+    \item Splitting the data into training and testing subsets using an 80-20 split ratio.
+    \item Normalizing features with \texttt{StandardScaler} to improve convergence during training.
+\end{itemize}
+This preprocessing ensures the input data is well-suited for training the neural network.
+
+\subsection{Dataset and DataLoader Integration}
+To streamline data handling, the preprocessed data is encapsulated into instances of \texttt{PhishingDataset}. These are further wrapped in PyTorch \texttt{DataLoader} objects, which provide efficient batch processing and shuffling capabilities. A batch size of 64 is used during training to balance computational efficiency and gradient stability.
+
+\subsection{Model Training}
+The training process is implemented in the \texttt{train\_model} function, which integrates all components:
+\begin{itemize}
+    \item The model is trained using the Adam optimizer with a learning rate of 0.001 and \texttt{CrossEntropyLoss} as the objective function.
+    \item A training loop iterates over the data for 15 epochs, performing forward propagation, loss computation, and backpropagation with gradient updates.
+    \item The average loss per epoch is logged to monitor the training progress.
+    \item Training time is recorded to evaluate the computational efficiency of the pipeline.
+\end{itemize}
+
+\subsection{Discussion}
+This modular implementation provides a solid foundation for phishing detection using neural networks. The design emphasizes scalability and flexibility, enabling easy modifications for future extensions. Additionally, the implementation tracks loss during training, to visualize model performance during each epoch. In our results section, we discuss the overall performance of the model, as well as any future improvements that could be made.
